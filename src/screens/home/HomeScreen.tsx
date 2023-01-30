@@ -1,20 +1,20 @@
 import React from 'react';
 import {View, Text, FlatList, ActivityIndicator} from 'react-native';
 
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {useNavigation} from '@react-navigation/native';
 
 import {colors} from '../../constants/colors';
 import {CustomButton, ListItem} from '../../components';
 import {EmptyContainer} from '../../containers/empty/EmptyContainer';
 import {horizontalScale, verticalScale} from '../../utils/metrics';
 import {Product} from '../../interfaces/product';
-import {RootStackParamList} from '../../navigation/stack_navigator/types';
+import {ProductScreenNavigationProp} from '../../navigation/stack_navigator/types';
 import {useProducts} from '../../hooks';
 import styles from './styles';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
+const HomeScreen: React.FC = () => {
+  const navigation = useNavigation<ProductScreenNavigationProp>();
 
-const HomeScreen: React.FC<Props> = ({navigation}) => {
   const {
     filteredData,
     isLoading,
