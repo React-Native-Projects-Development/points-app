@@ -11,7 +11,7 @@ import {
 } from '../../navigation/stack_navigator/types';
 import {formatDate} from '../../utils/utils';
 
-const ProductDetailScreen = () => {
+const ProductDetailsScreen = () => {
   const navigation = useNavigation<ProductScreenNavigationProp>();
   const route = useRoute<RootRouteProps<'ProductDetailsScreen'>>();
   const {createdAt, image, points, name} = route.params;
@@ -48,4 +48,4 @@ const ProductDetailScreen = () => {
   );
 };
 
-export default ProductDetailScreen;
+export default ProductDetailsScreen;
