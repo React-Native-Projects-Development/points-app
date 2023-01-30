@@ -3,7 +3,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import HomeScreen from '../../screens/home/HomeScreen';
-import ProductDetails from '../../screens/product_detail/ProductDetailScreen';
+import ProductDetailsScreen from '../../screens/product_detail/ProductDetailsScreen';
 
 import {RootStackParamList} from './types';
 
@@ -19,7 +19,10 @@ export const StackNavigator = () => {
         contentStyle: {backgroundColor: colors.background},
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="ProductDetailsScreen" component={ProductDetails} />
+      <Stack.Screen
+        name="ProductDetailsScreen"
+        component={ProductDetailsScreen}
+      />
     </Stack.Navigator>
   );
 };
